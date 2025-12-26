@@ -1,0 +1,1 @@
+SELECT z.name FROM person_order AS po JOIN person AS p ON po.person_id=p.id JOIN menu AS m ON po.menu_id=m.id JOIN pizzeria AS z ON m.pizzeria_id=z.id WHERE p.name='Dmitriy' AND po.order_date='2022-01-08' AND m.price<800;
