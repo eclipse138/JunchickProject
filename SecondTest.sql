@@ -1,0 +1,1 @@
+select * from person where person.gender = 'female' and address = 'Kazan' order by "name";
