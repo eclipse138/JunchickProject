@@ -1,0 +1,1 @@
+SELECT m.pizza_name, m.price, z.name AS pizzeria_name, v.visit_date FROM person_order AS po JOIN person AS p ON po.person_id=p.id JOIN menu AS m ON po.menu_id=m.id JOIN pizzeria AS z ON m.pizzeria_id=z.id JOIN person_visits AS v ON v.person_id=p.id AND v.pizzeria_id=z.id WHERE p.name='Kate' AND m.price BETWEEN 800 AND 1000 ORDER BY m.pizza_name, m.price, z.name, v.visit_date;

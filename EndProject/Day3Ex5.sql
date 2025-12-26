@@ -1,0 +1,1 @@
+SELECT z.name AS pizzeria_name FROM person_visits AS v JOIN person AS p ON v.person_id=p.id JOIN pizzeria AS z ON v.pizzeria_id=z.id WHERE p.name='Andrey' AND z.id NOT IN (SELECT m.pizzeria_id FROM person_order AS po JOIN menu AS m ON po.menu_id=m.id WHERE po.person_id=p.id) ORDER BY z.name;

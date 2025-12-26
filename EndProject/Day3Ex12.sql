@@ -1,0 +1,1 @@
+INSERT INTO person_order (person_id, menu_id, order_date) SELECT p.id, m.id, '2022-02-25' FROM person AS p JOIN menu AS m ON m.pizza_name='greek pizza';

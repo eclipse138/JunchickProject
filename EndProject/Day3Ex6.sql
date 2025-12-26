@@ -1,0 +1,1 @@
+SELECT m1.pizza_name, z1.name AS pizzeria_name_1, z2.name AS pizzeria_name_2, m1.price FROM menu AS m1 JOIN pizzeria AS z1 ON m1.pizzeria_id=z1.id JOIN menu AS m2 ON m1.pizza_name=m2.pizza_name AND m1.pizzeria_id<>m2.pizzeria_id JOIN pizzeria AS z2 ON m2.pizzeria_id=z2.id ORDER BY m1.pizza_name;

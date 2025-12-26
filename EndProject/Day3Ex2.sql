@@ -1,0 +1,1 @@
+SELECT m.pizza_name, m.price, z.name AS pizzeria_name FROM menu AS m LEFT JOIN person_order AS po ON m.id=po.menu_id JOIN pizzeria AS z ON m.pizzeria_id=z.id WHERE po.menu_id IS NULL ORDER BY m.pizza_name, m.price;

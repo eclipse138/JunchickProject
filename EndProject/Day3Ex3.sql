@@ -1,0 +1,1 @@
+SELECT z.name AS pizzeria_name FROM person_visits AS v JOIN person AS p ON v.person_id=p.id JOIN pizzeria AS z ON v.pizzeria_id=z.id WHERE p.gender='female' GROUP BY z.name HAVING COUNT(*) > (SELECT COUNT(*) FROM person_visits AS v2 JOIN person AS p2 ON v2.person_id=p2.id WHERE p2.gender='male' AND v2.pizzeria_id=z.id) ORDER BY z.name;
