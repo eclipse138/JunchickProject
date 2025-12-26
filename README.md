@@ -1,1 +1,1 @@
-Воротилин Владимир, junior, StartProject
+Воротилин Владимир, junior, Project
